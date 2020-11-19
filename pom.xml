@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dubbo-samples-echo</module>
+        <module>dubbo-samples-zookeeper</module>
     </modules>
     <packaging>pom</packaging>
 
