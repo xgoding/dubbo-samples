@@ -10,6 +10,8 @@
     <modules>
         <module>dubbo-samples-echo</module>
         <module>dubbo-samples-zookeeper</module>
+        <module>dubbo-samples-spi-java</module>
+        <module>dubbo-samples-spi-dubbo</module>
     </modules>
     <packaging>pom</packaging>
 
