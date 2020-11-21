@@ -20,5 +20,7 @@ public class SpiDemo {
         //通过 ExtensionLoader 调用默认 SPI 实现
         PrintService defaultExtension = ExtensionLoader.getExtensionLoader(PrintService.class).getDefaultExtension();
         defaultExtension.printService("hello world");
+        PrintService impl2 = ExtensionLoader.getExtensionLoader(PrintService.class).getExtension("impl2");
+        impl2.printService("hello world");
     }
 }

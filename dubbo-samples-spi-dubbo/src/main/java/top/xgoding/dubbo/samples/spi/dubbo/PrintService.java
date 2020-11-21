@@ -1,5 +1,6 @@
 package top.xgoding.dubbo.samples.spi.dubbo;
 
+import com.alibaba.dubbo.common.extension.Adaptive;
 import com.alibaba.dubbo.common.extension.SPI;
 
 /**
@@ -18,4 +19,7 @@ import com.alibaba.dubbo.common.extension.SPI;
 @SPI("impl")
 public interface PrintService {
     String printService(String message);
+
+    @Adaptive({"type"})
+    String adaptivePrint(String message);
 }

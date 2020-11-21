@@ -1,1 +1,3 @@
 impl=top.xgoding.dubbo.samples.spi.dubbo.PrintServiceImpl
+impl2=top.xgoding.dubbo.samples.spi.dubbo.PrintServiceImpl2
+top.xgoding.dubbo.samples.spi.dubbo.PrintServiceImplWrapper
