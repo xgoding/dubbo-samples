@@ -12,6 +12,7 @@
         <module>dubbo-samples-zookeeper</module>
         <module>dubbo-samples-spi-java</module>
         <module>dubbo-samples-spi-dubbo</module>
+        <module>dubbo-samples-spi-javassist</module>
     </modules>
     <packaging>pom</packaging>
 
