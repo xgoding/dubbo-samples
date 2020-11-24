@@ -1,6 +1,6 @@
 package top.xgoding.dubbo.samples.annotation.config;
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -24,8 +24,11 @@ public class ConsumerBootstrap {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConsumerConfiguration.class);
         context.start();
         GreetingServiceConsumer bean = context.getBean(GreetingServiceConsumer.class);
-        String xgoding = bean.sayHello("xgoding");
-        System.out.println(xgoding);
+        bean.sayHello("xgoding");
+        bean.sayHelloV1("xgoding");
+        bean.sayHelloV2("xgoding");
+        bean.sayHelloGd("xgoding");
+        bean.sayHelloZh("xgoding");
     }
 
     @Configuration

@@ -1,7 +1,11 @@
 package top.xgoding.dubbo.samples.annotation.config;
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.apache.dubbo.config.spring.ServiceBean;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
@@ -29,8 +33,10 @@ public class ProviderBootstrap {
 
     @Configuration
     @EnableDubbo(scanBasePackages = {"top.xgoding.dubbo.samples.annotation.impl"})
+    @ComponentScan(basePackages = "top.xgoding.dubbo.samples.annotation.bug")
     @PropertySource(value = "classpath:spring/dubbo-provider.properties")
-    public static class ProviderConfiguration{
+    public static class ProviderConfiguration {
 
     }
+
 }

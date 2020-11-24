@@ -1,10 +1,8 @@
 package top.xgoding.dubbo.samples.zookeeper;
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.apache.dubbo.container.spring.SpringContainer;
+import org.springframework.context.annotation.*;
 import top.xgoding.dubbo.samples.zookeeper.action.GreetingConsumer;
 
 /**
@@ -30,8 +28,8 @@ public class ConsumerBootstrap {
 
     @Configuration
     @EnableDubbo(scanBasePackages = "top.xgoding.dubbo.samples.zookeeper.action")
-    @ComponentScan(basePackages = "top.xgoding.dubbo.samples.zookeeper")
-    @PropertySource(value = "classpath:/spring/dubbo-consumer.properties")
+    @ComponentScan(basePackages = "top.xgoding.dubbo.samples.zookeeper.action")
+    @PropertySource(value = {"classpath:/spring/dubbo-consumer.properties"})
     public static class ConsumerConfig {
 
     }

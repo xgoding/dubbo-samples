@@ -1,6 +1,6 @@
 package top.xgoding.dubbo.samples.zookeeper.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 import top.xgoding.dubbo.samples.zookeeper.api.GreetingService;
 
 /**
@@ -15,10 +15,11 @@ import top.xgoding.dubbo.samples.zookeeper.api.GreetingService;
  * @version: V1.0
  * @modified: yxguang
  */
-@Service
+@DubboService
 public class GreetingServiceImpl implements GreetingService {
     @Override
     public String greeting(String message) {
+        System.out.println("Provider Thread: " + Thread.currentThread().getName());
         return "Hello: " + message;
     }
 }
