@@ -27,14 +27,22 @@ public class ConsumerBootstrap {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConsumerConfig.class);
         context.start();
         GreetingConsumer consumer = context.getBean(GreetingConsumer.class);
-        consumer.syncSayHello("xgoding");
+        consumer.syncCallAsyncSayHello("xgoding");
         Thread.sleep(1000);
-        consumer.asyncSayHello("xgoding", new Consumer<String>() {
+        consumer.syncCallAsyncSayHello("xgoding", new Consumer<String>() {
             @Override
             public void accept(String s) {
                 System.out.println("Async consumer ret : " + s);
             }
         });
+        Thread.sleep(2000);
+        consumer.syncCallAsyncGoodBye("xgoding");
+        Thread.sleep(2000);
+        consumer.asyncCallSyncSayHello();
+        Thread.sleep(2000);
+        consumer.asyncCallSyncSayHello2();
+        Thread.sleep(2000);
+        consumer.asyncCallSyncGoodbye();
     }
 
     @Configuration

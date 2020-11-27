@@ -59,6 +59,6 @@ public class AsyncGreetingServiceImpl implements AsyncGreetingService {
             // 写回响应
             asyncContext.write("goodbye " + name + ", async response from provider.");
         }).start();
-        return null;
+        return "123";
     }
 }
