@@ -1,6 +1,7 @@
 package top.xgoding.dubbo.samples.spi.dubbo;
 
-import com.alibaba.dubbo.common.extension.ExtensionLoader;
+
+import org.apache.dubbo.common.extension.ExtensionLoader;
 
 /**
  * <p>

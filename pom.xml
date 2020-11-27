@@ -16,6 +16,7 @@
         <module>dubbo-samples-annotation</module>
         <module>dubbo-samples-async</module>
         <module>dubbo-samples-attachement</module>
+        <module>dubbo-samples-cache</module>
     </modules>
     <packaging>pom</packaging>
 
