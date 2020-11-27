@@ -15,6 +15,7 @@
         <module>dubbo-samples-spi-javassist</module>
         <module>dubbo-samples-annotation</module>
         <module>dubbo-samples-async</module>
+        <module>dubbo-samples-attachement</module>
     </modules>
     <packaging>pom</packaging>
 
