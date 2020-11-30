@@ -1,5 +1,7 @@
 package top.xgoding.dubbo.samples.spi.java;
 
+import org.apache.dubbo.rpc.service.EchoService;
+
 import java.util.ServiceLoader;
 
 /**
@@ -15,6 +17,7 @@ import java.util.ServiceLoader;
  * @modified: yxguang
  */
 public class SpiDemo {
+
     public static void main(String[] args) {
         //调用SPI具体实现
         //一次性全部加载PrintService接口全部实现类
