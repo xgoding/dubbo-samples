@@ -18,6 +18,7 @@
         <module>dubbo-samples-attachement</module>
         <module>dubbo-samples-cache</module>
         <module>dubbo-samples-callback</module>
+        <module>dubbo-samples-context</module>
     </modules>
     <packaging>pom</packaging>
 
