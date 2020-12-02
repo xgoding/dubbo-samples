@@ -19,6 +19,7 @@
         <module>dubbo-samples-cache</module>
         <module>dubbo-samples-callback</module>
         <module>dubbo-samples-context</module>
+        <module>dubbo-spring-boot-auto-config</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -149,6 +150,11 @@
                     <target>${target.level}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -160,5 +166,38 @@
             </plugins>
         </pluginManagement>
     </build>
-
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Release Repository</name>
+            <url>https://packages.aliyun.com/maven/repository/2028089-release-0JXT2K</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshot</id>
+            <name>Snapshot Repository</name>
+            <url>https://packages.aliyun.com/maven/repository/2028089-snapshot-GTUiHa</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://packages.aliyun.com/maven/repository/2028089-release-0JXT2K/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>rdc-snapshots</id>
+            <url>https://packages.aliyun.com/maven/repository/2028089-snapshot-GTUiHa/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
